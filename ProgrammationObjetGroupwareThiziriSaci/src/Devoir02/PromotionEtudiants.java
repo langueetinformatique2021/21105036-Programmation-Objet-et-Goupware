@@ -1,11 +1,13 @@
 package Devoir02;
 
 import Devoir02.Etudiant;
-
+/**
+ * @author SACI Thiziri
+ */
 public class PromotionEtudiants {
 	/**
 	 * Une promotion d'étudiants a comme attributs en commun : l'année universitaire, la spécialité et le cycle
-	 * Création des attributs
+	 * Déclaration des attributs
 	 */
 	private int AnneeUniversitaire;
 	private String Specialite;

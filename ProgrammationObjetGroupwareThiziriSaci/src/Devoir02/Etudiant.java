@@ -1,5 +1,7 @@
 package Devoir02;
-
+/**
+ * @author SACI Thiziri
+ */
 public class Etudiant {
 	//Déclaration des attributs 
 	public String  Nom; 
@@ -11,6 +13,10 @@ public class Etudiant {
 	public int MoyenneAnnuelle;
 	public int AnneeUniversitaire;
 	public String RowPromo;
+	/**
+	 * Déclaration de la classe
+	 * @param: Prend les attributs déclarés comme paramètres
+	 */
 	public Etudiant(String Nom,String Prenom,int DateNaissance, int NumEtudiant, String Specialite, String Cycle, int MoyenneAnnuelle,int AnneeUniversitaire, String RowPromo) {
 		this.Nom= Nom;
 		this.Prenom= Prenom;
@@ -46,12 +52,17 @@ public class Etudiant {
 	public int AnneeUniversitaire() {
 		return AnneeUniversitaire;
 	}
-	public void CreateRowPromo() {                     //Ceci va etre une ligne du tableau de la promotion
+	/**
+	 *Creation d'une méthode: on crée une ligne de tableau 
+	 *@param : les attributs de l'étudiant
+	 *Celle-ci va etre une ligne du tableau de la promotion
+	 */
+	public void CreateRowPromo() {                    
 		RowPromo= Nom+ Prenom+ DateNaissance+ NumEtudiant+ Specialite+ Cycle + AnneeUniversitaire+MoyenneAnnuelle;
 	}
-	
-	//Déclaration de la méthode de la classe Etudiant.
-	//On veut afficher les attributs par la suite
+	/**
+	 *Creation de la méthode d'affichage
+	 */
 	public void afficher(){
 		System.out.println(RowPromo);                      
 		System.out.println("Caractéristiques de l'étudiant"+"Nom et prénom :"+Nom+Prenom+"Date de naissance"+DateNaissance+"Numéro d'étudiant :"+NumEtudiant+"Spécialité et Cycle :"+Specialite+Cycle);
