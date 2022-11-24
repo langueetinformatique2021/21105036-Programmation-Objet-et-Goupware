@@ -2,6 +2,7 @@ package atelier07;
 
 public class Cercle extends FigureGeometrique implements Comparable {
 	private double surface;
+	private double perimetre;
 	private double rayonCercle;              //on initialise la variable r du rayon du  cercle
 	//le cercle se définit par sa couleur comme tout autre fugure geométrique et son rayon
 	public Cercle (String co, double rayon) {                         
@@ -26,6 +27,11 @@ public class Cercle extends FigureGeometrique implements Comparable {
 	public float getSurface() {
 		return this.surface();
 	}
+	public void afficherAttributs(float surface, float perimetre) {
+		this.surface = surface;
+		this.perimetre= perimetre;
+		System.out.println("Attributs du cercle: "+ surface + perimetre);
+	}
 	//Implémentation de la méthode compareTo selon le périmètre des cercles
 	@Override
 	public int compareTo(Cercle OtherCercle) {
@@ -44,9 +50,4 @@ public class Cercle extends FigureGeometrique implements Comparable {
 		}
 		return res;
 		}
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	}
+}
