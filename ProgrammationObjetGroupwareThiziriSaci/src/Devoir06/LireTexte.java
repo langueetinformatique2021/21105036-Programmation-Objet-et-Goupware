@@ -14,7 +14,6 @@ public class LireTexte {
 	 * @throws FileNotFoundException 
 	*/
 	public LireTexte(String ft) throws FileNotFoundException {
-		NomFichier= ft.split("/")[ft.split("/").length - 1];
 		FileReader fr = new FileReader(NomFichier);      //nom du fichier
 		BufferedReader entrée = new BufferedReader(fr);  //lecture du fichier 
 	} 
@@ -25,7 +24,7 @@ public class LireTexte {
 	* @throws FichierVide Fichier vide
 	*/
 	protected void Ouvrir() throws IOException, FichierVide {
-		ligne = entrée.readLine();
+		ligne = entrée.readLine();                             
 		if (ligne != null) {
 			tok = new StringTokenizer(ligne);
 			}
@@ -36,7 +35,7 @@ public class LireTexte {
 	/** Fermeture du fichier
 	* @throws IOException Erreur à la fermeture
 	*/
-	protected void Fermer(BufferedReader entrée) throws IOException {
+	protected void Fermer() throws IOException {
 		entrée.close();
 	}
 	/** Lecture mot à mot du fichier
